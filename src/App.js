@@ -42,7 +42,7 @@ export default function App() {
         <FlatList
           style={styles.repositoryContainer}
           data={repositories}
-          keyExtractor={(item, index) => index.toString()}
+          keyExtractor={repo => repo.id}
           renderItem={({ item: repository }) => (
             <>
               <Text style={styles.repository}>{repository.title}</Text>
